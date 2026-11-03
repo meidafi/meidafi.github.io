@@ -1,24 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Daphne Meidan</title>
+<title>Daphne Eliyahu Meidan</title>
 
 <style>
+
+:root{
+--navy:#12355B;
+--blue:#2A628F;
+--gold:#D69E2E;
+--light:#F7F8FA;
+--dark:#1A202C;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:#f7f8fa;
+background:var(--light);
+color:var(--dark);
+line-height:1.6;
+}
+
+nav{
+position:sticky;
+top:0;
+background:white;
+padding:18px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+color:var(--navy);
 }
 
 .hero{
-background:#12355B;
+background:linear-gradient(135deg,#12355B,#204F7A);
 color:white;
-padding:80px;
+padding:70px 0;
 }
 
 .container{
@@ -27,39 +59,103 @@ max-width:1200px;
 margin:auto;
 }
 
+.hero-content{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.profile{
+width:280px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.hero h3{
+font-weight:normal;
+margin-top:0;
+}
+
 .card{
 background:white;
-padding:30px;
+padding:35px;
 border-radius:15px;
 margin-top:30px;
-box-shadow:0 3px 12px rgba(0,0,0,0.1);
+box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
-h1{
-font-size:48px;
+.section-title{
+color:var(--navy);
+margin-top:0;
 }
 
-h2{
-color:#12355B;
-}
-
-img{
-max-width:100%;
-border-radius:10px;
-}
-
-.research-grid{
+.paper-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:25px;
+}
+
+.paper-card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+.paper-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.paper-content{
+padding:20px;
+}
+
+.paper-content h3{
+margin-top:0;
+color:var(--navy);
+}
+
+.highlight-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.footer{
-background:#12355B;
+.highlight{
+background:#f4f7fb;
+padding:20px;
+border-radius:10px;
+}
+
+.button{
+display:inline-block;
+padding:10px 18px;
+background:var(--gold);
 color:white;
-text-align:center;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+footer{
+margin-top:50px;
 padding:30px;
-margin-top:40px;
+text-align:center;
+background:var(--navy);
+color:white;
 }
 
 </style>
@@ -67,32 +163,26 @@ margin-top:40px;
 </head>
 
 <body>
-<div style="
-background:white;
-padding:15px;
-text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
-">
 
-<a href="#about">About</a> |
-<a href="#research">Research</a> |
-<a href="#publications">Publications</a> |
+<nav>
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#papers">Featured Papers</a>
+<a href="#awards">Awards</a>
 <a href="#contact">Contact</a>
+</nav>
 
-</div>
-
-<div class="hero">
+<section class="hero">
 
 <div class="container">
 
-<div style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;">
+<div class="hero-content">
 
-<img src="images/Daphne Meidan EAS.jpg"
-     style="width:260px;border-radius:15px;">
+<img src="images/profile.jpg" class="profile">
 
-<div>
+<div class="hero-text">
 
-<h1>Daphne Meidan, PhD</h1>
+<h1>Daphne Eliyahu Meidan, PhD</h1>
 
 <h3>
 Atmospheric Chemistry • Earth System Modeling • Climate Interactions
@@ -101,104 +191,177 @@ Atmospheric Chemistry • Earth System Modeling • Climate Interactions
 <p>
 Postdoctoral Researcher<br>
 Department of Atmospheric Chemistry and Climate<br>
-Instituto de Química Física Blas Cabrera (IQF-CSIC)<br>
+Instituto de Química Física Blas Cabrera (IQF)<br>
 Consejo Superior de Investigaciones Científicas (CSIC), Spain
 </p>
 
+<a class="button" href="mailto:deliyahu@iqf.csic.es">
+Contact Me
+</a>
+
 </div>
 
 </div>
+
+</div>
+
+</section>
 
 <div class="container">
 
 <div id="about" class="card">
 
-<h2>About</h2>
+<h2 class="section-title">About</h2>
 
 <p>
-I am a Postdoctoral Researcher in the Department of Atmospheric Chemistry and Climate at the Instituto de Química Física Blas Cabrera (IQF-CSIC), Spain.
+I am a Postdoctoral Researcher in the Department of Atmospheric Chemistry and Climate at IQF-CSIC in Madrid, Spain.
 </p>
 
 <p>
-My research investigates how atmospheric composition responds to natural and anthropogenic environmental change. By integrating Earth system modeling, atmospheric observations, laboratory and field measurements, isotopic tracers, and geochemical constraints, I aim to understand the processes linking atmospheric chemistry, climate dynamics, air quality, ecosystem productivity, and human well-being.
+My research investigates how atmospheric composition responds to natural and anthropogenic environmental change. By integrating Earth system modeling, atmospheric observations, laboratory and field measurements, isotopic tracers, and geochemical constraints, I seek to understand the processes linking atmospheric chemistry, climate variability, air quality, ecosystem productivity, and human well-being.
 </p>
 
 <p>
-My work spans atmospheric oxidation chemistry, methane-climate feedbacks, dust and halogen chemistry, isotope-enabled Earth system modeling, air quality, and environmental impacts on agriculture and society.
+My work spans atmospheric oxidation chemistry, methane-climate feedbacks, dust and halogen chemistry, stable isotopes, Earth system modeling, air quality, and environmental impacts on agriculture and society.
 </p>
 
 </div>
 
 <div id="research" class="card">
 
-<h2>Research Highlights</h2>
-<div class="card">
+<h2 class="section-title">Research Themes</h2>
 
-<h2>Featured Science</h2>
+<div class="highlight-grid">
 
-<img src="images/science.aec4071-fa.jpg">
-
-<p>
-Dust-mediated chlorine chemistry and methane cycling during the Last Glacial Maximum.
-</p>
-
-</div>
-<div class="research-grid">
-
-<div>
-<h3>Atmospheric Oxidation</h3>
-<p>
-Understanding methane, ozone, OH, and chlorine chemistry.
-</p>
+<div class="highlight">
+<h3>Atmospheric Chemistry</h3>
+<p>Reactive trace gases, ozone, OH, chlorine chemistry, and atmospheric oxidation.</p>
 </div>
 
-<div>
+<div class="highlight">
 <h3>Earth System Modeling</h3>
+<p>Development and application of CESM-based chemistry-climate simulations.</p>
+</div>
+
+<div class="highlight">
+<h3>Methane & Climate</h3>
+<p>Sources, sinks, isotopes, and climate feedbacks.</p>
+</div>
+
+<div class="highlight">
+<h3>Dust & Halogens</h3>
+<p>Mineral dust impacts on atmospheric composition and radiative forcing.</p>
+</div>
+
+<div class="highlight">
+<h3>Stable Isotopes</h3>
+<p>Using isotopic tracers to constrain atmospheric processes.</p>
+</div>
+
+<div class="highlight">
+<h3>Air Quality Impacts</h3>
+<p>Implications for ecosystems, agriculture, and human health.</p>
+</div>
+
+</div>
+
+</div>
+
+<div id="papers" class="card">
+
+<h2 class="section-title">Featured Research</h2>
+
+<div class="paper-grid">
+
+<div class="paper-card">
+
+<a href="#" target="_blank">
+<img src="images/science.jpg">
+</a>
+
+<div class="paper-content">
+
+<h3>Science</h3>
+
 <p>
-Using CESM and advanced chemistry-climate simulations.
+Developed a dust-mediated sea-spray aerosol mechanism showing how chlorine activation altered methane oxidation during the Last Glacial Maximum and helped reconcile methane isotope records.
 </p>
+
 </div>
 
-<div>
-<h3>Air Quality & Climate</h3>
+</div>
+
+<div class="paper-card">
+
+<a href="https://eos.org/editor-highlights/dust-and-marine-halogens-team-up-to-destroy-tropospheric-ozone" target="_blank">
+<img src="images/agu.jpg">
+</a>
+
+<div class="paper-content">
+
+<h3>AGU Advances</h3>
+
 <p>
-Connecting atmospheric change to ecosystems, agriculture, and human health.
+Demonstrated that interactions between mineral dust and marine halogens significantly reduce tropospheric ozone and influence atmospheric radiative forcing on a global scale.
 </p>
+
+</div>
+
+</div>
+
+<div class="paper-card">
+
+<a href="#" target="_blank">
+<img src="images/methane.jpg">
+</a>
+
+<div class="paper-content">
+
+<h3>Nature Communications</h3>
+
+<p>
+Showed how chlorine chemistry can substantially alter methane lifetime and reveal important climate-chemistry feedbacks affecting future atmospheric composition.
+</p>
+
+</div>
+
+</div>
+
+<div class="paper-card">
+
+<a href="#" target="_blank">
+<img src="imagesgate interactions between atmospheric composition, climate forcing, and environmental change across multiple scales.
+</p>
+
+</div>
+
+</div>
+
+<div class="paper-card">
+
+<a href="#" target="_blank">
+images/covid.jpg
+</a>
+
+<div class="paper-content">
+
+<h3>COVID-19 Air Quality Study</h3>
+
+<p>
+Used pandemic-related emission reductions as a natural experiment to quantify anthropogenic influences on atmospheric chemistry and regional air quality.
+</p>
+
 </div>
 
 </div>
 
 </div>
 
-<div id="publications" class="card">
-     
-<h2>Featured Publications</h2>
-
-<ul>
-
-<li>
-Science – Dust-mediated chlorine chemistry during the Last Glacial Maximum
-</li>
-
-<li>
-Nature Communications – Methane removal through chlorine-mediated climate-chemistry interactions
-</li>
-
-<li>
-AGU Advances – Global ozone reduction driven by dust-catalyzed halogen chemistry
-</li>
-
-<li>
-COVID-19 air quality impacts
-</li>
-
-</ul>
-
 </div>
 
-<div class="card">
+<div id="awards" class="card">
 
-<h2>Awards</h2>
+<h2 class="section-title">Awards & Recognition</h2>
 
 <ul>
 <li>SAERI Fellowship</li>
@@ -209,24 +372,33 @@ COVID-19 air quality impacts
 
 <div id="contact" class="card">
 
-<h2>Contact</h2>
+<h2 class="section-title">Contact</h2>
 
 <p>
-<a href="mailto:deliyahu@iqf.csic.es">
-deliyahu@iqf.csic.es
-</a>
+📧 <a href="mailto:deliyahu@iqf.csic.es">deliyahu@iqf.csic.es</a>
 </p>
 
 <p>
-<a href="https://orcid.org/0000-0001-7746-4979" target="_blank">
-ORCID
-</a>
+🔗 <a href="https://orcid.org/0000-0001-7746-4979" target="_blank">ORCID</a>
 </p>
 
 <p>
-<a href="https://scholar.google.com/citations?user=PGjPHGUAAAAJ" target="_blank">
-Google Scholar
-</a>
+🎓 <a href="https://scholar.google.com/citations?user=PGjPHGUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+</p>
+
+<p>
+💻 <a href="https://github.com/meidafi" target="_blank">GitHub</a>
 </p>
 
 </div>
+
+</div>
+
+<footer>
+
+© Daphne Eliyahu Meidan
+
+</footer>
+
+</body>
+</html>
